@@ -22,7 +22,7 @@ class App {
     }
 
     private database(): void {
-        mongoose.connect('mongodb+srv://silvio:yLxkd2MtN4BPDMqV@cluster0.udcjj.mongodb.net/test?retryWrites=true&w=majority', {
+        mongoose.connect(`mongodb+srv://silvio:${process.env.DB_PASS}@cluster0.udcjj.mongodb.net/test?retryWrites=true&w=majority`, {
             useUnifiedTopology: true,
             useNewUrlParser: true,
         });
